@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculator</title>
+</head>
+<body>
+    <div class="container">
+        <h1 id="text">Simple Calculator</h1>
+        <from action="value 1">
+            <label for="value1">Value 1</label><br>
+            <input type="number" id="Value1" name="value1"><br><br>
+            <label for="value2">Value 2</label><br>
+            <input type="number" id="Value2" name="value2"><br><br>
+        </from>
+        <button id="add">Add</button> 
+        <button di="subtract">subtract</button>
+        <button id="multiply">Multiply</button>
+        <button id="divide">Divide</button>
+        <br><br>
+        <output id="output"></output> Result: <script>
+            function calculate(operation){
+                let value1 = document.getElementById("value1").value;
+                let value2 = document.getElementById("value2").value;
+                let result = 0;
+                if(operation === "add"){
+                    result = parseFloat(value1) + parseFloat(value2);
+                }else if(operation === "subtract"){
+                    result = parseFloat(value1) - parseFloat(value2);
+                }else if(operation === "multiply"){
+                    result = parseFloat(value1) * parseFloat(value2);
+                }else if(operation === "divide"){
+                    result = parseFloat(value1) / parseFloat(value2);
+                }
+                document.getElementById("output").innerHTML = result;
+            }
+        </script>
+
+    </div>
+</body>
+</html>
